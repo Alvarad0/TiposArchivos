@@ -10,6 +10,14 @@ namespace TiposArchivos
     {
         static void Main(string[] args)
         {
+            FileHelper fh = new FileHelper();
+            var res = fh.GetFileSystemObjects("./");
+
+            foreach (var item in res)
+            {
+                Console.WriteLine($"Name: {item.Name} - Type: {item.FileType}");
+            }
+            Console.ReadLine();
         }
     }
 }
